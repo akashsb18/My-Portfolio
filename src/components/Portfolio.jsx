@@ -8,7 +8,6 @@ import reactSmooth from '../assests/Portfolio/reactSmooth.jpg';
 import reactWeather from '../assests/Portfolio/reactWeather.jpg';
 
 const Portfolio = () => {
-
     const portfolios = [
         {
             id: 1,
@@ -16,7 +15,7 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            src: installNode,
+            src: reactParallax,
         },
         {
             id: 3,
@@ -24,23 +23,22 @@ const Portfolio = () => {
         },
         {
             id: 4,
-            src: reactParallax,
+            src: reactSmooth,
         },
         {
             id: 5,
-            src: reactSmooth,
+            src: installNode,
         },
         {
             id: 6,
             src: reactWeather,
         },
-    ]
-
+    ];
 
     return (
         <div
             name="portfolio"
-            className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen pb-20 "
+            className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
         >
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className="pb-8">
@@ -73,4 +71,5 @@ const Portfolio = () => {
         </div>
     );
 };
-export default Portfolio
+
+export default Portfolio;
