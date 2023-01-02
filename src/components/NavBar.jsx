@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { BsFillSunFill } from "react-icons/bs";
+import { BsFillMoonFill } from "react-icons/bs"
 
-const NavBar = () => {
+const NavBar = ({ darkTheme, setDarkTheme }) => {
     const [nav, setNav] = useState(false);
 
     const links = [
@@ -28,17 +30,21 @@ const NavBar = () => {
         },
     ];
 
+
     return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black dark:bg-stone-300 fixed">
             <div>
-                <h1 className="text-5xl font-signature ml-2">Akash</h1>
+                <h1 className="text-5xl font-signature ml-2 dark:text-black ">Akash</h1>
+            </div>
+            <div >
+                <button className="hover:scale-110 duration-200 " type="button" onClick={() => setDarkTheme(!darkTheme)} >{darkTheme ? <BsFillSunFill size={25} /> : <BsFillMoonFill size={25} color="black" />}</button>
             </div>
 
             <ul className="hidden md:flex">
                 {links.map(({ id, link }) => (
                     <li
                         key={id}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 dark:text-black hover:scale-105 duration-200"
                     >
                         <Link to={link} smooth duration={400}>
                             {link}

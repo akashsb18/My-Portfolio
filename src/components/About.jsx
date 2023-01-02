@@ -4,16 +4,16 @@ const About = () => {
     return (
         <div
             name="about"
-            className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+            className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white dark:bg-stone-300 dark:bg-gradient-to-b dark:from-stone-300 dark:to-stone-300"
         >
-            <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+            <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
                 <div className="pb-8">
-                    <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+                    <p className="text-4xl font-bold inline border-b-4 border-gray-500 dark:text-black">
                         About
                     </p>
                 </div>
 
-                <p className="text-xl mt-20">
+                <p className="text-xl mt-20 dark:text-black ">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
                     deserunt illum mollitia officiis qui exercitationem perferendis neque
                     quasi a recusandae necessitatibus tempora iusto! Blanditiis error
@@ -24,7 +24,7 @@ const About = () => {
 
                 <br />
 
-                <p className="text-xl">
+                <p className="text-xl dark:text-black">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
                     pariatur, vel similique sint, nobis aspernatur ut praesentium
                     explicabo ipsam aliquid quasi laboriosam et culpa possimus repudiandae
